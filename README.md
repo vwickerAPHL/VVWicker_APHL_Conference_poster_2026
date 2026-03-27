@@ -25,7 +25,7 @@ Hello! This page is linked to Vaughn Wicker's poster at the 2026 APHL conference
    major pipeline sections and the types of output it produces. You're giving an overview to someone new
    to nf-core here, in 15-20 seconds. For an example, see https://github.com/nf-core/rnaseq/blob/master/README.md#introduction
 -->
-![GSU-Viral-Pathogen-Detection](./docs/images/NF-GSU-Render.png) 
+![GSU-Viral-Pathogen-Detection](./docs/NF-GSU-Render.png) 
 
 <!-- TODO nf-core: Include a figure that guides the user through the major workflow steps. Many nf-core
      workflows use the "tube map" design for that. See https://nf-co.re/docs/guidelines/graphic_design/workflow_diagrams#examples for examples.   -->
@@ -71,7 +71,7 @@ Before downloading the pipeline, please note the following dependencies and requ
    >Set up your prefferred Command Line Interface and ensure you are using a linux-like environment (e.g. for Windows, have WSL activated)
    >*Recommended*: Install a package manager to handle dependencies, such as [conda](https://docs.conda.io/en/latest/)
 
-2. **(Optional): Create a conda environment with the provided [.yml](docs/GSU-VPD.yaml) file**
+2. **(Optional): Create a conda environment with the provided [.yml](./docs/GSU-VPD.yaml) file**
    > The following command can be used to create the conda environment:
    ```bash
    conda env create -f GSU-VPD.yaml -n <ENV_NAME>
