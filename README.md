@@ -115,11 +115,16 @@ Single End Reads:
 `samplesheet.csv`:
 
 ```csv
-sample,fastq
+sample,fastq_1
 SAMPLE-ID,SAMPLE-ID.fastq.gz
 ```
 
 Each row represents a fastq file (single-end) or a pair of fastq files (paired end).
+
+> Note for ONT data: ONT data is often stored as multiple .fastq.gz files for each barcode (sample). Before constructing the samplesheet, concatenate all the .fastq.gz files per barcode in one fastq.gz file. e.g.
+> ```bash 
+for i in RUN/fastq_pass/barcode*; do cat $i/* > $(echo $i | cut -d "/" -f 3).fastq.gz; done```
+> Then, proceed with constructing the samplesheet.
 
 
 
@@ -147,7 +152,6 @@ Additional Parameters are outlined below to adjust the behavior of the pipeline
 |References|One .fastq file with all references to map reads to (e.g. one .fastq file with Multiple Viral pathogen genomes)|--reference *<ref.fastq>*|
 |Nextclade Analysis| Specifically for HIV and Mpox (all clades). These parameters run pathogen-specific Nextclade analysis and, in some cases, additional custom analysis. *To add additional pathogens, initate a pull request or open an issue on this repository.* | --mpxv <br>--hiv
 
-## Glossary
 
 ## Credits
 
