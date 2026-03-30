@@ -122,8 +122,9 @@ SAMPLE-ID,SAMPLE-ID.fastq.gz
 Each row represents a fastq file (single-end) or a pair of fastq files (paired end).
 
 > Note for ONT data: ONT data is often stored as multiple .fastq.gz files for each barcode (sample). Before constructing the samplesheet, concatenate all the .fastq.gz files per barcode in one fastq.gz file. e.g.
-> ```bash 
-for i in RUN/fastq_pass/barcode*; do cat $i/* > $(echo $i | cut -d "/" -f 3).fastq.gz; done```
+```bash 
+for i in RUN/fastq_pass/barcode*; do cat $i/* > $(echo $i | cut -d "/" -f 3).fastq.gz; done
+```
 > Then, proceed with constructing the samplesheet.
 
 
